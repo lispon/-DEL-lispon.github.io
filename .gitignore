@@ -1,4 +1,5 @@
 # vscode配置文件路径
-.vscode/*
-# 使用sphinx生成html时的中间文件.
-docs/doctrees/*
+docsrc/.vscode/*
+
+# 使用sphinx生成html的存放路径. 需要复制到docs文件夹内.
+docsrc/_build/*

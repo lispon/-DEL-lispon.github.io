@@ -10,7 +10,7 @@ Welcome to lispon's blog's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   src/example
+   example
 
 
 Indices and tables
