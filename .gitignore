@@ -1,0 +1,4 @@
+# vscode配置文件路径
+.vscode/*
+# 使用sphinx生成html时的中间文件.
+docs/doctrees/*
