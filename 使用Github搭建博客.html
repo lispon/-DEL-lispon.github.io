@@ -34,7 +34,8 @@
             
   <div class="section" id="github-pages-sphinx">
 <h1>使用Github pages + sphinx搭建博客<a class="headerlink" href="#github-pages-sphinx" title="永久链接至标题">¶</a></h1>
-<p>创建时间: 20191029</p>
+<p>创建时间: 20191029
+最近修改时间: 20191030</p>
 <p>使用的工具:</p>
 <ul class="simple">
 <li><p>github账户</p></li>
@@ -50,42 +51,140 @@
 <h2>一. 在Github 中新建存储库, 并配置Github Pages<a class="headerlink" href="#github-github-pages" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id1">
 <h3>1. 新建存储库<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
-<p>如下图所示, 新建存储库, 存储库的名称为”username.github.io”, 其中,
-username为Github账号的名称, 这里我的账户名称为lispon.
-为了方便, 最好勾选图中的**4**, 这样会自动生成README.md文件.</p>
+<blockquote>
+<div><p>如下图所示, 新建存储库, 存储库的名称为”username.github.io”, 其中, username为
+Github账户的名称, 这里我的账户名称为lispon.为了方便, 最好勾选图中的**4**, 这样会自动生成README.md文件.</p>
 <img alt="_images/20191029_新建Github存储库.png" src="_images/20191029_新建Github存储库.png" />
 <p><strong>注意:</strong> 这里即使设置为Private, 搭建的博客仍然可以被访问.</p>
+</div></blockquote>
 </div>
 <div class="section" id="github-pages">
 <h3>2. 配置Github Pages<a class="headerlink" href="#github-pages" title="永久链接至标题">¶</a></h3>
-<p>如下图所示, 点击Settings; 向下找到Github Pages.</p>
+<blockquote>
+<div><p>如下图所示, 点击Settings; 向下找到Github Pages.</p>
 <img alt="_images/20191029_点击settings.png" src="_images/20191029_点击settings.png" />
 <p>如果新建的存储库的名称正好符合**username.github.io**的格式, 那么无法选择Source, 如下图示, 同时, 可以直接通过**https://username.github.io**来访问, 否则, 必须要通过*https://username.github.io/&lt;存储库名称&gt;**来访问.</p>
 <img alt="_images/20191029_GithubPages设置_1.png" src="_images/20191029_GithubPages设置_1.png" />
-<p>否则, 会出现选择Source的下拉列表, 如下图所示. 最好是选择第二项**master branch
-/docs older**, 如果存储库中没有docs文件夹, 该项灰显, 无法选中.</p>
+<p>否则, 会出现选择Source的下拉列表, 如下图所示. 最好是选择第二项**master branch/docs older**, 如果存储库中没有docs文件夹, 该项灰显, 无法选中.</p>
 <img alt="_images/20191029_GithubPages设置_2.png" src="_images/20191029_GithubPages设置_2.png" />
-<p><strong>注意:</strong> 虽然, 没有出现选择Source的下拉列表, 但是仍然能够实现在master branch/docs floder中放置静态html网页文件.</p>
+<p><strong>注意:</strong> 这里需要做一个取舍. 如果想实现直接通过 <code class="docutils literal notranslate"><span class="pre">https://username.github.io</span></code> 的格式访问, 那么无法选择 <code class="docutils literal notranslate"><span class="pre">docs</span></code> 作为 <code class="docutils literal notranslate"><span class="pre">Github</span> <span class="pre">Pages</span></code> 的源位置; 如果想实现 <code class="docutils literal notranslate"><span class="pre">docs</span></code> 作为 <code class="docutils literal notranslate"><span class="pre">Github</span> <span class="pre">Pages</span></code> 的源位置, 那么不能直接通过 <code class="docutils literal notranslate"><span class="pre">https://username.github.io</span></code> 的格式访问(或者有其他方法, 我不了解).</p>
+</div></blockquote>
 </div>
 <div class="section" id="id2">
 <h3>3. 克隆存储库到本地, 修改.<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
-<p>使用Git命令添加docs文件夹, 并设置Github Pages Source为master branch/docs folder</p>
-<p>如果docs文件夹中为空, 那么Git会忽略该文件, 无法添加到存储库中, 那么可以新建
-txt文件, 重命名为”.nojekyll”, 然后提交. .nojekyll文件是让Github查
-找提供的index.html文件作为博客主页, 否则, Github会根据存储库下根目录下的
-README.md自动转化成html并作为博客主页(在存储库中不存在README.md转化成的html文件).</p>
+<blockquote>
+<div><p>使用Git命令添加docs文件夹, 并设置Github Pages Source为master branch/docs folder</p>
+<p>如果docs文件夹中为空, 那么Git会忽略该文件, 无法添加到存储库中, 那么可以新建txt文件,
+重命为”.nojekyll”, 然后提交. .nojekyll文件是让Github查找提供的index.html文件作
+为博客主, 则, Github会根据存储库下根目录下的README.md自动转化成html并作为博客主页
+(在存储库中不存在EADME.md转化成的html文件).</p>
+</div></blockquote>
 </div>
 <div class="section" id="id3">
 <h3>4. 实际效果<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
-<p>将静态html文件添加到该存储库下的docs文件夹内, 然后访问https://username.gihtub.io, 可以看到效果, 默认主页是index.html文件.</p>
+<blockquote>
+<div><p>将静态html文件添加到该存储库下的docs文件夹内, 然后访问https://username.gihtub.io, 可以看到效果, 默认主页是 <code class="docutils literal notranslate"><span class="pre">index.html</span></code> 文件.</p>
 <p>可以访问 <a class="reference external" href="https://lispon.github.io">https://lispon.github.io</a> 查看效果.</p>
 <p>或者访问 <a class="reference external" href="https://github.com/lispon/lispon.github.io">https://github.com/lispon/lispon.github.io</a> 查看源码.</p>
+</div></blockquote>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="sphinx-restructure">
 <h2>二. 在本地使用sphinx + restructure来编写博客<a class="headerlink" href="#sphinx-restructure" title="永久链接至标题">¶</a></h2>
-<p><strong>未完待续</strong></p>
+<div class="section" id="pythonsphinx">
+<h3>1. 安装python和sphinx<a class="headerlink" href="#pythonsphinx" title="永久链接至标题">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>安装 <code class="docutils literal notranslate"><span class="pre">python</span></code>, 目前版本最新为3.7.4, 虽然3.8已经推出, 但是还不建议使用. python 2不建议使用.</p></li>
+<li><p>安装 <code class="docutils literal notranslate"><span class="pre">sphinx</span></code>. 打开 <code class="docutils literal notranslate"><span class="pre">cmd</span></code> 窗口, 输入 <code class="docutils literal notranslate"><span class="pre">ppip</span> <span class="pre">install</span> <span class="pre">-U</span> <span class="pre">Sphinx</span></code></p></li>
+<li><p>打开 <code class="docutils literal notranslate"><span class="pre">cmd</span></code> 窗口, 输入 <code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code>, 根据提示信息输入. 推荐配置参数如下图所示.</p></li>
+</ul>
+<img alt="_images/20191030_sphinx初始化.png" src="_images/20191030_sphinx初始化.png" />
+<ul class="simple">
+<li><p>生成的文件目录见下图:</p></li>
+</ul>
+<img alt="_images/20191030_sphinx生成的目录.png" src="_images/20191030_sphinx生成的目录.png" />
+</div></blockquote>
+</div>
+<div class="section" id="sphinx">
+<h3>2. sphinx生成的目录解释<a class="headerlink" href="#sphinx" title="永久链接至标题">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">_build</span></code> 文件夹</dt><dd><p>sphinx默认在该文件夹下生成html文件.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">_static</span></code> 文件夹</dt><dd><p>该文件夹里面可以存放一些 <code class="docutils literal notranslate"><span class="pre">css</span></code> 文件或其他文件, 该文件夹里的所有内容
+都会复制到生成的html文件夹里的 <code class="docutils literal notranslate"><span class="pre">_static</span></code> 文件夹. 如果是图片的话最
+好不要放置在该文件夹里, 因为生成的html文件夹里后自动生成一个 <code class="docutils literal notranslate"><span class="pre">_image</span></code>
+文件夹, 所有的图片都会复制到该文件夹里.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">_templates</span></code> 文件夹</dt><dd><p>模板文件夹, 暂时没有使用. 暂不清楚功能.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">conf.py</span></code> 文件</dt><dd><p><code class="docutils literal notranslate"><span class="pre">sphinx</span></code> 使用的配置文件.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">index.rst</span></code> 文件</dt><dd><p>根据该文件组织文档结构.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">make.bat</span></code> 文件</dt><dd><p>批处理命令, 通过该文件生成 <code class="docutils literal notranslate"><span class="pre">html</span></code>, 在 <code class="docutils literal notranslate"><span class="pre">window</span></code> 中使用.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">Makefile</span></code> 文件</dt><dd><p>与 <code class="docutils literal notranslate"><span class="pre">make.bat</span></code> 文件功能类似, 应该是在 <code class="docutils literal notranslate"><span class="pre">linux</span></code> 系统中应用, 没有确认.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="sphinxhtml-build">
+<h3>3. sphinx生成的html的目录设置为存储库的根目录, 而非_build文件夹.<a class="headerlink" href="#sphinxhtml-build" title="永久链接至标题">¶</a></h3>
+<blockquote>
+<div><p>如下图所示, <code class="docutils literal notranslate"><span class="pre">docsrc</span></code> 文件夹里存放的就是 <code class="docutils literal notranslate"><span class="pre">rst</span></code> 的源文件.</p>
+<img alt="_images/20191030_github存储库目录_1.png" src="_images/20191030_github存储库目录_1.png" />
+<p><code class="docutils literal notranslate"><span class="pre">docsrc</span></code> 文件夹的内容如下图所示:</p>
+<img alt="_images/20191030_github存储库目录_2.png" src="_images/20191030_github存储库目录_2.png" />
+<p>为了实现将生成的html文件夹放置在 <code class="docutils literal notranslate"><span class="pre">docsrc</span></code> 目录同级目录下, 需要对 <code class="docutils literal notranslate"><span class="pre">make.bat</span></code> 文件进行修改, 具体修改内容如下:</p>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="s2">&quot;</span><span class="nv">%1</span><span class="s2">&quot;</span> <span class="o">==</span> <span class="s2">&quot;github&quot;</span> <span class="p">(</span>
+<span class="nv">%SPHINXBUILD%</span> -M html <span class="nv">%SOURCEDIR%</span> <span class="nv">%BUILDDIR%</span> <span class="nv">%SPHINXOPTS%</span>
+robocopy <span class="nv">%BUILDDIR%</span>/html/ ../ /E <span class="p">&gt;</span> nul
+<span class="k">echo</span>.Generated files copied to ../
+<span class="k">goto</span> <span class="nl">end</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>实际效果如下图所示:</p>
+<img alt="_images/20191030_make_修改.png" src="_images/20191030_make_修改.png" />
+<p>下面主要说明一下 <code class="docutils literal notranslate"><span class="pre">robocopy</span> <span class="pre">%BUILDDIR%/html/</span> <span class="pre">../</span> <span class="pre">/E</span> <span class="pre">&gt;</span> <span class="pre">nul</span></code> 命令.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>其中 <code class="docutils literal notranslate"><span class="pre">robocopy</span></code> 是window自带的多线程复制工具. 这里的 <code class="docutils literal notranslate"><span class="pre">%BUILDDIR%/html/</span></code> 参数是需要复制的原来位置, <code class="docutils literal notranslate"><span class="pre">../</span></code> 是复制文件的目标位置, <code class="docutils literal notranslate"><span class="pre">/E</span></code> 表示复制子文件夹, 包含空文件夹. <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">nul</span></code> 表示过程信息.</p></li>
+<li><p>这里的意思是使用robocopy命令, 将 <code class="docutils literal notranslate"><span class="pre">%BUILDDIR%/html/</span></code> 文件夹内的所有文件及文件夹(包含所有空的文件夹), 复制到 <code class="docutils literal notranslate"><span class="pre">make.bat</span></code> 文件所在目录的上层目录, 并且, 不显示过程信息.</p></li>
+<li><p>如果没有 <code class="docutils literal notranslate"><span class="pre">&gt;</span> <span class="pre">nul</span></code>, 会显示下图所示的信息:</p></li>
+</ul>
+<img alt="_images/20191030_robocopy_输出信息.png" src="_images/20191030_robocopy_输出信息.png" />
+</div></blockquote>
+<ul class="simple">
+<li><p>此时, 可以使用 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">github</span></code> 来代替 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> 来生成html, 生成的html不仅存在于 <code class="docutils literal notranslate"><span class="pre">_build</span></code> 文件夹内, 而且已经复制到了 <code class="docutils literal notranslate"><span class="pre">docsrc</span></code> 所在目录的同级目录. 同时, <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> 仍然可以使用.</p></li>
+<li><p>其中 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">github</span></code> 中的 <code class="docutils literal notranslate"><span class="pre">github</span></code> 可以使用其他自定义的文本(注意不要与sphinx本身支持的格式冲突), 将 <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">&quot;%1&quot;</span> <span class="pre">==</span> <span class="pre">&quot;github&quot;</span> <span class="pre">(</span></code>  中的 <code class="docutils literal notranslate"><span class="pre">github</span></code> 改为自定义的文本, 那么可以使用 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">自定义文本</span></code> 来实现.</p></li>
+</ul>
+</div></blockquote>
+</div>
 </div>
 </div>
 
