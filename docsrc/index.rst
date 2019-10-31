@@ -7,10 +7,11 @@ Welcome to lispon's blog's documentation!
 =========================================
 
 .. toctree::
+   :numbered:
    :maxdepth: 1
    :caption: Contents:
 
-   使用Github搭建博客
+   在Github中搭建博客 <使用Github搭建博客>
 
 
 Indices and tables
